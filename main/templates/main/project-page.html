@@ -1,0 +1,30 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main class="section">
+    <div class="container">
+
+        <div class="project-details">
+            <h1 class="title-1">Video service</h1>
+            <img src="{{cards_big.image.url}}" class="project-details__cover" alt="{{cards.name}}">
+            
+
+            <div class="project-details__desc">
+                <p>{{cards_big.skills}}</p>
+            </div>
+
+
+            <a href="https://github.com/Kiper02" class="btn-outline">
+                <img src="{% static "main/img/icons/gitHub-black.svg" %}" alt="GitHub">
+                GitHub repo
+            </a>
+        </div>
+
+        
+
+    </div>
+</main>
+
+{% endblock content %}

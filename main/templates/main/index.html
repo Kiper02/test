@@ -1,0 +1,37 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="header">
+    <div class="header__wrapper">
+        <h1 class="header__title">
+            <strong>Hi, my name is <em>Kirill</em></strong><br>
+            a fullstack developer
+        </h1>
+        <div class="header__text">
+            <p>with passion for learning and creating.</p>
+        </div>
+        <a href="#projects" class="btn">Next</a>
+    </div>
+</header>
+
+<main class="section">
+<div class="container">
+    <h2 class="title-1" id="projects">Projects</h2>
+    <ul class="projects">
+
+
+        {% for card in cards %}
+            <li class="project">
+                    <a href="project_page/{{card.slug}}">
+                        <img src="{{card.image.url}}" alt="{{card.name}}" class="project__image">
+                        <h3 class="project__title">{{card.name}}</h3>
+                    </a>
+            </li>
+        {% endfor %}
+
+
+    </ul>
+</div>
+</main>
+{% endblock content %}

@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kirill Permyakov</title>
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+    <link type="Image/x-icon" href="{% static "main/img/Logo.svg" %}" rel="icon">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-row">
+                
+                <a href="{% url "index" %}" class="logo"><img width=50 height=50 src="{% static "main/img/Logo.svg" %}" class="logo"" alt=""><strong>Freelancer</strong> portfolio</a>
+
+
+                <button class="dark-mode-btn">
+                    <img src="{% static "main/img/icons/sun.svg" %}" alt="Light mode" class="dark-mode-btn__icon">
+                    <img src="{% static "main/img/icons/moon.svg" %}" alt="Dark mode" class="dark-mode-btn__icon">
+                </button>
+
+
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="{% url "index" %}" class="nav-list__link nav-list__link--active">Projects</a></li>
+                    <li class="nav-list__item"><a href="{% url "skills" %}" class="nav-list__link">Skills</a></li>
+                    <li class="nav-list__item"><a href="{% url "contacts" %}" class="nav-list__link">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+{% block content %}
+    <header class="header">
+            <div class="header__wrapper">
+                <h1 class="header__title">
+                    <strong>Hi, my name is <em>Kirill</em></strong><br>
+                    a fullstack developer
+                </h1>
+                <div class="header__text">
+                    <p>with passion for learning and creating.</p>
+                </div>
+                <a href="#projects" class="btn">Next</a>
+            </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="title-1" id="projects">Projects</h2>
+            <ul class="projects">
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/01.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Gaming streaming portal</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/02.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Video service</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/03.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Video portal</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/04.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Dating app</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/05.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Landing</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="{% url "project-page" %}">
+                        <img src="{% static "main/img/projects/06.jpg" %}" alt="Project img" class="project__image">
+                        <h3 class="project__title">Gaming community</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+{% endblock content %}
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="social">
+                    <li class="social__item"><a href="https://vk.com/ukkp02"><img src="{% static "main/img/icons/vk.svg" %}" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://github.com/Kiper02"><img src="{% static "main/img/icons/gitHub.svg" %}" alt="Link"></a></li>
+                </ul>
+                <div class="copyright">
+                    <p>©2024 fullstack-dev.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static "main/js/main.js" %}"></script>
+</body>
+</html>
